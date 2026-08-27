@@ -1,11 +1,16 @@
 function validEmail(str) {
   //your JS code here.
-	const pattern = /^[A-Za-z0-9]+([.-][A-Za-z0-9]+)*@[A-Za-z0-9]+(\.[A-Za-z]{2,3})+$/;
+	if (typeof str !== 'string' || str.length === 0) {
+    return false;
+  }
+	
+	const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.[a-zA-Z]{2,3})+$/;
 
-  return pattern.test(str);
+  return emailRegex.test(str);
 }
 
 // Do not change the code below.
 const str = prompt("Enter an email address.");
 alert(validEmail(str));
+
 
