@@ -1,6 +1,6 @@
 function validEmail(str) {
   //your JS code here.
-	const pattern = /^[A-Za-z0-9_]+@[A-Za-z0-9_]+(\.[A-Za-z0-9_]{2,3})+$/;
+	const pattern = /^[A-Za-z0-9]+([.-][A-Za-z0-9]+)*@[A-Za-z0-9]+([.-][A-Za-z0-9]+)*\.[A-Za-z]{2,3}$/;
 
   return pattern.test(str);
 }
